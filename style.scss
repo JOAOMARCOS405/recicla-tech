@@ -17,52 +17,79 @@ header {
   align-items: flex-start; //Padrão. Os itens são postos no começo do eixo Y (vertical)
   align-items: flex-end; //Os itens são postos no final do eixo Y (vertical)
   align-items: center; //Os itens são postos no meio do eixo Y (vertical)
-}
 
-div {
+
+.caixaLogo {
   //border: solid;
-  display: flex;
-  justify-content: space-between;
-  width: 16%;
-  align-items: center;
-}
+   display: flex;
+   justify-content: space-between;
+   width: 16%;
+   align-items: center;
+ }
 
-nav {
-  //border: solid rgb(14, 196, 29);
-  display: flex;
-  justify-content: space-evenly;
-  //justify-content: space-between;
-  width: 40%;
-  align-items: center;
-}
-
-a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #485563;
-}
-
-.BtnVerdeHeader {
-  background-color: #21c05c;
-  color: #ffffff;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 6px;
-}
-
-.PrimeiraSection{
-  border: solid #000;
-  height: 50vh;
-  display: flex;
-
-  
-  section{
-    border: solid;
+  nav {
+    //border: solid rgb(14, 196, 29);
+    display: flex;
+    justify-content: space-evenly;
+    //justify-content: space-between;
     width: 50%;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #485563;
+  }
+
+  .BtnVerdeHeader {
+    background-color: #21c05c;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 6px;
+    }
+}
+
+.PrimeiraSection {
+  border: solid #ff0000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  
+  section {
+    border: solid ;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+  h2{
+    font-size: 3rem;
+    font-weight: bold;  
+    width: 100%;
+  }
+
+  p{
+    font-size: 1.25rem;
+    width: 90%;
+    border: solid green;
+  }
+
+  }
+}
+
+.BoxBntFirstSection{
+  border: solid purple;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+
+  button{
+    cursor: pointer;
+    padding: 30px 40px;
   }
 }
 
@@ -112,6 +139,79 @@ a {
       font-weight: 900;
       border-radius: 20px;
       font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+  }
+  .caixaLogo {
+    border: solid;
+    width: 70%;
+  }
+
+  nav {
+    border: solid;
+    width: 100%;
+
+    a {
+      font-size: 0.8rem;
+    }
+
+    .btnVerdeHeader {
+      font-size: 0.8rem;
+    }
+  }
+
+.PrimeiraSection{
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  section{
+    height: 80vh;
+    h2{
+      font-size: 1.5rem;
+      width: 100%;
+    }
+    p{
+      width: 100%;
+    }
+    img{
+      width: 50%;
+    }
+  }
+  
+}
+
+.BoxBntFirstSection{
+  width: 100%;
+}
+
+
+  //Section Produtos Disponíveis
+
+  .produtosDisponiveis {
+    display: flex; //Não teria necessidade de usar. Ele já foi ativado na linha 87
+    flex-direction: column;
+    background-color: pink;
+    
+
+    article {
+      width: 80%;
+      text-align: center;
+
+      button {
+       font-size: 1rem;
+       width: 70%;
+        font-weight: 400;
+      }
     }
   }
 }
